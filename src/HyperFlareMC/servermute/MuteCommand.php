@@ -37,11 +37,11 @@ class MuteCommand extends Command{
         foreach($players as $player){
             if($this->plugin->getUniversalMute()){
                 $this->plugin->setUniversalMute(false);
-                $server->broadcastMessage(TextFormat::YELLOW . "Shut up mode has been disabled!");
+                $server->broadcastMessage(TextFormat::YELLOW . "Server-wide Mute mode has been disabled!");
                 return;
             }
             $this->plugin->setUniversalMute();
-            $server->broadcastMessage(TextFormat::YELLOW . "Shut up mode has been enabled!");
+            $server->broadcastMessage(TextFormat::YELLOW . "Server-wide Mute mode has been enabled!");
         }
     }
 
