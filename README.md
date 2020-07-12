@@ -15,7 +15,7 @@ You can mute the entire server with one command:
 ## TODO
 
 - [x] Basic Server Mute
-- [ ] Customizable Messages
+- [x] Customizable Messages
 - [ ] Reasoning
 
 ## Contributions

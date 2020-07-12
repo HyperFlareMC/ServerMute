@@ -6,7 +6,6 @@ namespace HyperFlareMC\servermute;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerChatEvent;
-use pocketmine\utils\TextFormat;
 
 class EventListener implements Listener{
 
