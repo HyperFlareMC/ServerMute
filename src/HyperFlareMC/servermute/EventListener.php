@@ -26,7 +26,7 @@ class EventListener implements Listener{
     public function onChat(PlayerChatEvent $event){
         self::$config = $this->plugin->getConfig()->getAll();
         $player = $event->getPlayer();
-        if($this->plugin->getUniversalMute()){
+        if($this->plugin->isMuted()){
             $event->setCancelled();
             $player->sendMessage(self::$config["no-talk-message"]);
             return;

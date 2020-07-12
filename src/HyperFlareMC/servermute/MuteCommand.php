@@ -41,12 +41,12 @@ class MuteCommand extends Command{
         }
         $players = $this->plugin->getServer()->getOnlinePlayers();
         foreach($players as $player){
-            if($this->plugin->getUniversalMute()){
-                $this->plugin->setUniversalMute(false);
+            if($this->plugin->isMuted()){
+                $this->plugin->setMuted(false);
                 $server->broadcastMessage(self::$config["disabled-message"]);
                 return;
             }
-            $this->plugin->setUniversalMute();
+            $this->plugin->setMuted();
             $server->broadcastMessage(self::$config["enabled-message"]);
         }
     }

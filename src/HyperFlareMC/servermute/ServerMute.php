@@ -18,11 +18,11 @@ class ServerMute extends PluginBase{
         $this->getServer()->getCommandMap()->register("servermute", new MuteCommand($this));
     }
 
-    public function getUniversalMute() : bool{
+    public function isMuted() : bool{
         return $this->universalMute;
     }
 
-    public function setUniversalMute(bool $bool = true) : void{
+    public function setMuted(bool $bool = true) : void{
         $this->universalMute = $bool;
     }
 
