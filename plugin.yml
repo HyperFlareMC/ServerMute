@@ -1,0 +1,4 @@
+name: ServerMute
+version: 1.0.0
+main: HyperFlareMC\servermute\ServerMute
+api: 3.0.0
