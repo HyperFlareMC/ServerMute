@@ -11,6 +11,11 @@ use pocketmine\utils\TextFormat;
 class EventListener implements Listener{
 
     /**
+     * @var array|mixed[]
+     */
+    private static $config;
+
+    /**
      * @var ServerMute
      */
     private $plugin;
@@ -20,10 +25,11 @@ class EventListener implements Listener{
     }
 
     public function onChat(PlayerChatEvent $event){
+        self::$config = $this->plugin->getConfig()->getAll();
         $player = $event->getPlayer();
         if($this->plugin->getUniversalMute()){
             $event->setCancelled();
-            $player->sendMessage(TextFormat::RED . "The entire server is muted! No one can talk!");
+            $player->sendMessage(self::$config["no-talk-message"]);
             return;
         }
     }

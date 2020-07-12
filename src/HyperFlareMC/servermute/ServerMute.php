@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace HyperFlareMC\servermute;
 
 use pocketmine\plugin\PluginBase;
+use pocketmine\utils\Config;
 
 class ServerMute extends PluginBase{
 
