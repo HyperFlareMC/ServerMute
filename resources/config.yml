@@ -2,5 +2,5 @@
 # Defaults:
 no-permission-message: "§cYou do not have permission to use this command!"
 disabled-message: "§eServer-wide Mute has been disabled!"
-enabled-message: "§eServer-wide Mute has been enabled!"
+enabled-message: "§eServer-wide Mute has been enabled! Reason: {reason}"
 no-talk-message: "§cThe whole server is muted! No one can talk!"

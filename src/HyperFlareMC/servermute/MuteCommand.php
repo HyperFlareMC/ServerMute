@@ -40,14 +40,20 @@ class MuteCommand extends Command{
             return;
         }
         $players = $this->plugin->getServer()->getOnlinePlayers();
+        if(count($args) === 0){
+            $reason = "Unspecified";
+        }else{
+            $reason = implode(" ", $args);
+        }
         foreach($players as $player){
             if($this->plugin->isMuted()){
                 $this->plugin->setMuted(false);
-                $server->broadcastMessage(self::$config["disabled-message"]);
+                $player->sendMessage(self::$config["disabled-message"]);
                 return;
             }
             $this->plugin->setMuted();
-            $server->broadcastMessage(self::$config["enabled-message"]);
+            $message = str_replace("{reason}", $reason, self::$config["enabled-message"]);
+            $player->sendMessage($message);
         }
     }
 

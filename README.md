@@ -16,7 +16,8 @@ You can mute the entire server with one command:
 
 - [x] Basic Server Mute
 - [x] Customizable Messages
-- [ ] Reasoning
+- [x] Reasoning
+- [ ] Store Mute History
 
 ## Contributions
 
